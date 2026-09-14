@@ -1,0 +1,71 @@
+<!doctype html>
+<meta charset="UTF-8">
+<title>JobJack — Employer Jobs Prototypes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:oklch(96% 0.006 258);
+  --surface:oklch(99% 0.002 258);
+  --border:oklch(90% 0.009 258);
+  --border-strong:oklch(80% 0.014 258);
+  --ink:oklch(22% 0.045 258);
+  --ink-muted:oklch(46% 0.03 258);
+  --ink-faint:oklch(64% 0.018 258);
+  --brand:oklch(56% 0.14 152);
+  --brand-tint:oklch(95% 0.035 152);
+  --brand-tint-text:oklch(32% 0.1 152);
+  --shadow-card:0 1px 2px oklch(22% 0.045 258 / .06), 0 10px 28px -10px oklch(22% 0.045 258 / .16);
+  --font-display:'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-body:'Public Sans', ui-sans-serif, system-ui, sans-serif;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased;}
+.shell{max-width:720px;margin:0 auto;padding:64px 24px 80px;}
+h1{font-family:var(--font-display);font-size:26px;font-weight:800;margin:0 0 8px;letter-spacing:-.01em;}
+p.lead{font-size:14px;color:var(--ink-muted);margin:0 0 32px;line-height:1.55;max-width:520px;}
+.list{display:flex;flex-direction:column;gap:12px;}
+a.card{
+  display:block;background:var(--surface);border:1px solid var(--border);border-radius:14px;
+  padding:18px 20px;text-decoration:none;color:inherit;transition:border-color .12s, box-shadow .12s, transform .12s;
+}
+a.card:hover{border-color:var(--border-strong);box-shadow:var(--shadow-card);transform:translateY(-1px);}
+a.card.featured{border-color:var(--brand);background:var(--brand-tint);}
+.card-title{font-family:var(--font-display);font-size:15.5px;font-weight:700;margin-bottom:4px;}
+a.card.featured .card-title{color:var(--brand-tint-text);}
+.card-desc{font-size:12.5px;color:var(--ink-muted);line-height:1.5;}
+.tag{
+  display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--brand-tint-text);background:oklch(90% 0.06 152);border-radius:5px;padding:2px 7px;margin-bottom:8px;
+}
+</style>
+
+<div class="shell">
+  <h1>JobJack — Employer Jobs prototypes</h1>
+  <p class="lead">Standalone HTML/CSS/JS prototypes for the ATS employer "Manage Jobs" listing page. No build step — each link opens a self-contained page.</p>
+
+  <div class="list">
+    <a class="card featured" href="jobjack-employer-jobs-page.html">
+      <span class="tag">Main prototype</span>
+      <div class="card-title">Employer Jobs — Manage Jobs page</div>
+      <div class="card-desc">The current working page: list-view job rows, filters/drawer, branch &amp; site scoping, pagination.</div>
+    </a>
+
+    <a class="card" href="jobjack-employer-jobs-filter-access-config.html">
+      <div class="card-title">Filter bar — access-based configuration</div>
+      <div class="card-desc">Exploration of how the filter bar reconfigures per user access tier (single site, multi-site, multi-region, full access), grounded in real usage data.</div>
+    </a>
+
+    <a class="card" href="jobjack-employer-job-card-options.html">
+      <div class="card-title">Job card layout options</div>
+      <div class="card-desc">Earlier comparison of job-card layout directions (concluded exploration, kept for reference).</div>
+    </a>
+
+    <a class="card" href="jobjack-employer-jobs-page-v1-cards-2up.html">
+      <div class="card-title">Manage Jobs (v1, cards 2/row)</div>
+      <div class="card-desc">Frozen snapshot of the earlier 2-cards-per-row layout, preserved as a checkpoint.</div>
+    </a>
+  </div>
+</div>
